@@ -9,9 +9,10 @@ body {
     display: flex;
     border: 10px solid salmon;
     padding: 2px;
+    
 }
 
-.grid-squareX {
+.grid-column {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -19,12 +20,22 @@ body {
     margin: -1px;
 }
 
-.grid-squareY {
+#gridSquare {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
     margin: 0px;
+}
+
+/*
+#gridSquare:hover {
+    background-color: black;
+} 
+*/
+
+.square-background {
+    background-color: black;
 }
 
 
