@@ -1,0 +1,30 @@
+#gridContainer {
+    width: 35em;
+    height: 35em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto; 
+    border: 10px solid salmon;
+    padding: 2px;
+}
+
+.grid-squareX {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    margin: -1px;
+}
+
+.grid-squareY {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    margin: 0px;
+}
+
+
+
+
