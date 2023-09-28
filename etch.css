@@ -1,19 +1,21 @@
 body {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #gridContainer {
     width: 35em;
     height: 35em;
     display: flex;
-    border: 10px solid salmon;
+    border: 40px solid plum;
+    border-radius: 20px;
     padding: 2px;
     
 }
 
 .grid-column {
-    border: 1px solid black;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -21,21 +23,15 @@ body {
 }
 
 #gridSquare {
-    border: 1px solid black;
+    border: 1px solid gray;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
     margin: 0px;
 }
 
-/*
-#gridSquare:hover {
-    background-color: black;
-} 
-*/
-
 .square-background {
-    background-color: black;
+    background-color: darkgray;
 }
 
 
