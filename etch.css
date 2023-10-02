@@ -11,7 +11,7 @@ body {
     border: 40px solid plum;
     border-radius: 20px;
     padding: 2px;
-    
+    margin-bottom: 1em;
 }
 
 .grid-column {
@@ -32,6 +32,16 @@ body {
 
 .square-background {
     background-color: darkgray;
+}
+
+.square-background-plum {
+    background-color: plum;
+}
+
+.button-container{
+    display: flex;
+    width: 175px;
+    justify-content: space-around;
 }
 
 
