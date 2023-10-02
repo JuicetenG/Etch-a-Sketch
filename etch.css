@@ -5,8 +5,8 @@ body {
 }
 
 #gridContainer {
-    width: 35em;
-    height: 35em;
+    width: 32em;
+    height: 32em;
     display: flex;
     border: 40px solid plum;
     border-radius: 20px;
