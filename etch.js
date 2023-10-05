@@ -20,6 +20,7 @@ function createGrid(){
 
     const grid = document.querySelectorAll('#gridSquare');
     grid.forEach(square => square.addEventListener('mouseover', changeColor));
+    
     clearGrid.addEventListener('click', eraseGrid);
 
     function eraseGrid(){
@@ -31,14 +32,8 @@ function removeGrid(){
     gridSize = sliderInput.value;
     let gridSquares = gridContainer.querySelectorAll('div');
     gridSquares.forEach(square => square.remove());
-    createGrid()
+    createGrid();
 }
-
-function changeColor(e){
-    e.target.classList.add(backgroundColor);
-}
-
-sliderInput.addEventListener('input', removeGrid);
 
 defaultColor.addEventListener('click', () => {
     backgroundColor = "square-background";
@@ -46,7 +41,14 @@ defaultColor.addEventListener('click', () => {
 
 plumColor.addEventListener('click', () => {
     backgroundColor = "square-background-plum";
+ 
 });
+
+function changeColor(e){
+    e.target.classList.add(backgroundColor);
+}
+
+sliderInput.addEventListener('input', removeGrid);
 
 createGrid();
 
