@@ -3,7 +3,7 @@ const plumColor = document.querySelector('#plum');
 const defaultColor = document.querySelector('#default');
 const clearGrid = document.querySelector('#reload');
 const sliderInput = document.querySelector('#slider');
-let backgroundColor = "square-background"
+let backgroundColor = "darkgray"
 let gridSize = sliderInput.value;
 
 function createGrid(){    
@@ -24,7 +24,7 @@ function createGrid(){
     clearGrid.addEventListener('click', eraseGrid);
 
     function eraseGrid(){
-        grid.forEach(square => square.removeAttribute('class'));
+        grid.forEach(square => square.style.backgroundColor = "white");
     }
 }
 
@@ -36,16 +36,16 @@ function removeGrid(){
 }
 
 defaultColor.addEventListener('click', () => {
-    backgroundColor = "square-background";
+    backgroundColor = "purple";
 });
 
 plumColor.addEventListener('click', () => {
-    backgroundColor = "square-background-plum";
+    backgroundColor = "plum";
  
 });
 
 function changeColor(e){
-    e.target.classList.add(backgroundColor);
+    e.target.style.backgroundColor = backgroundColor;
 }
 
 sliderInput.addEventListener('input', removeGrid);

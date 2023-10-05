@@ -5,17 +5,18 @@ body {
 }
 
 #gridContainer {
-    width: 32em;
-    height: 32em;
+    width: 30em;
+    height: 30em;
     display: flex;
-    border: 40px solid plum;
+    border: 35px solid purple;
     border-radius: 20px;
-    padding: 2px;
+    padding: .3em;
     margin-bottom: 1em;
+    background-color: lightgray;
 }
 
 .grid-column {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -23,19 +24,11 @@ body {
 }
 
 #gridSquare {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
     margin: 0px;
-}
-
-.square-background {
-    background-color: darkgray;
-}
-
-.square-background-plum {
-    background-color: plum;
 }
 
 .button-container{
