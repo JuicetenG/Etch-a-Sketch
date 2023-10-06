@@ -32,23 +32,31 @@ function createGrid(){
 
 function removeGrid(){
     gridSize = sliderInput.value;
-    let gridSquares = gridContainer.querySelectorAll('div');
+    const gridSquares = gridContainer.querySelectorAll('div');
     gridSquares.forEach(square => square.remove());
     createGrid();
 }
 
-defaultColor.addEventListener('click', () => {
-    backgroundColor = "darkgray";
-});
-
-plumColor.addEventListener('click', () => {
-    backgroundColor = "plum";
- 
-});
-
 function changeColor(e){
     e.target.style.backgroundColor = backgroundColor;
 }
+
+plumColor.addEventListener('click', () => {
+    const gridSquares = gridContainer.querySelectorAll('div');
+    const purps = ["#360f2a", "#68324a", "#61447e", "#a484c7", "#c0b1f4"];
+
+    gridSquares.forEach(square => {
+        const randomColor = purps[(Math.floor(Math.random() * purps.length))];
+        square.addEventListener('mouseenter', (e) => {e.target.style.backgroundColor = randomColor;});
+    });
+});
+
+defaultColor.addEventListener('click', () => {
+    const gridSquares = gridContainer.querySelectorAll('div');
+    gridSquares.forEach(square => {
+        square.addEventListener('mouseenter', (e) => {e.target.style.backgroundColor = "darkgray";});
+    });
+});
 
 sliderInput.addEventListener('input', removeGrid);
 createGrid();
