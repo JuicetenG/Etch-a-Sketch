@@ -92,6 +92,7 @@ button:hover {
 }
 
 #slider::-moz-range-thumb {
+    -moz-appearance: none;
     height: 16px;
     width: 16px;
     border-radius: 4px;
