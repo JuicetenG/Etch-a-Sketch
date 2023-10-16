@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector('#gridContainer');
-const plumColor = document.querySelector('#plum');
+const purpleColors = document.querySelector('#purples');
 const defaultColor = document.querySelector('#default');
 const clearGrid = document.querySelector('#reload');
 const sliderInput = document.querySelector('#slider');
@@ -41,9 +41,9 @@ function changeColor(e){
     e.target.style.backgroundColor = backgroundColor;
 }
 
-plumColor.addEventListener('click', () => {
+purpleColors.addEventListener('click', () => {
     const gridSquares = gridContainer.querySelectorAll('div');
-    const purps = ["#360f2a", "#68324a", "#61447e", "#a484c7", "#c0b1f4"];
+    const purps = ["#800080", "#69359c", "#6a5acd", "#967bb6", "#b768a2"];
 
     gridSquares.forEach(square => {
         const randomColor = purps[(Math.floor(Math.random() * purps.length))];
