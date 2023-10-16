@@ -65,10 +65,12 @@ button {
     height: 1.5em;
     background-color: lightgray;
     cursor: pointer;
+    border: 2px outset #555555;
 }
 
 button:hover {
     background-color: #967bb6;
+    border: 2px inset #555555; 
 }
 
 #slider {
@@ -90,6 +92,7 @@ button:hover {
 }
 
 #slider::-moz-slider-thumb {
+    -webkit-appearance: none;
     height: 16px;
     width: 16px;
     border-radius: 4px;
