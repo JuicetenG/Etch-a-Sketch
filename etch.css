@@ -16,9 +16,9 @@ h1 {
     width: 30em;
     height: 30em;
     display: flex;
-    border: 35px solid #7851a9;
-    border-radius: 20px;
-    padding: .3em;
+    border: 36px solid #7851a9;
+    border-radius: 10px;
+    padding: 5px;
     margin-bottom: 1em;
     margin-top: -2em;
     background-color: lightgray;

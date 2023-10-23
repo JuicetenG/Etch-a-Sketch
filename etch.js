@@ -15,20 +15,23 @@ function createGrid(){
         for(let j = 0; j < gridSize; j++){
             const gridSquare = document.createElement('div');
             gridSquare.setAttribute('id', 'gridSquare');
+            gridSquare.classList.add('cell');
             gridColumn.appendChild(gridSquare);
             gridSquare.style.backgroundColor = "white";
         } 
     }
 
-    const grid = document.querySelectorAll('#gridSquare');
-    grid.forEach(square => square.addEventListener('mouseover', changeColor));
-    
+    const grid = document.querySelectorAll('.cell');    
     clearGrid.addEventListener('click', eraseGrid);
 
     function eraseGrid(){
         grid.forEach(square => square.style.backgroundColor = "white");
     }
 }
+
+gridContainer.addEventListener('mouseover', (e) => {
+    if(e.target.classList.contains('cell'))e.target.style.backgroundColor = changeColor();
+});
 
 function removeGrid(){
     gridSize = sliderInput.value;
@@ -38,24 +41,19 @@ function removeGrid(){
 }
 
 function changeColor(e){
-    e.target.style.backgroundColor = backgroundColor;
+    const purps = ["#800080", "#69359c", "#6a5acd", "#967bb6", "#b768a2"];
+    if(backgroundColor === "purple"){
+        const randomColor = purps[(Math.floor(Math.random() * purps.length))];
+        return randomColor;
+    } else return "darkgray"; 
 }
 
 purpleColors.addEventListener('click', () => {
-    const gridSquares = gridContainer.querySelectorAll('div');
-    const purps = ["#800080", "#69359c", "#6a5acd", "#967bb6", "#b768a2"];
-
-    gridSquares.forEach(square => {
-        const randomColor = purps[(Math.floor(Math.random() * purps.length))];
-        square.addEventListener('mouseenter', (e) => {e.target.style.backgroundColor = randomColor;});
-    });
+    backgroundColor = "purple";
 });
 
 defaultColor.addEventListener('click', () => {
-    const gridSquares = gridContainer.querySelectorAll('div');
-    gridSquares.forEach(square => {
-        square.addEventListener('mouseenter', (e) => {e.target.style.backgroundColor = "darkgray";});
-    });
+    backgroundColor = "darkgray";
 });
 
 sliderInput.addEventListener('input', removeGrid);
