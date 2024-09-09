@@ -6,6 +6,7 @@ const sliderInput = document.querySelector('#slider');
 
 let gridSize = sliderInput.value;
 let backgroundColor = "darkgray"
+let draw = false;
 
 function createGrid(){    
     for(let i = 0; i < gridSize; i++){
@@ -29,8 +30,14 @@ function createGrid(){
     }
 }
 
+gridContainer.addEventListener('click', () => {
+  if(draw === false) {
+    draw = true;
+  } else draw = false;
+});
+
 gridContainer.addEventListener('mouseover', (e) => {
-    if(e.target.classList.contains('cell'))e.target.style.backgroundColor = changeColor();
+    if((e.target.classList.contains('cell')) && (draw === true))e.target.style.backgroundColor = changeColor();
 });
 
 function removeGrid(){
